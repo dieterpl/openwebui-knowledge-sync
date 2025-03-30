@@ -119,7 +119,7 @@ def clone_or_pull_repository():
             logger.info("Pulled latest changes from repository")
         else:
             # Clone repository with authentication
-            run_command(f'git clone {authenticated_url}', 
+            run_command(f'git clone {authenticated_url} .', 
                         cwd=SYNC_DIRECTORY, 
                         error_message="Failed to clone repository")
             logger.info("Cloned repository")
